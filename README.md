@@ -2,7 +2,7 @@
 ENSEA TD Project runner
 "better version" because previous version was bad so i had to reorganize the code from scratch
 
-How to import this project in IntelliJ IDE :
+# How to import this project in IntelliJ IDE :
 
 1. In the IDE, go to File > New > Project from Version Control, under URL paste this repEveryo's url (found under Code > HTTPS)
 2. Make sure you have javafx downloaded in a file where you can find it

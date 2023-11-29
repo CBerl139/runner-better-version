@@ -24,12 +24,16 @@ public class StartPage {
         background.relocate(-200,0);
 
         //create welcome text
-        Text gameTitle = new Text(100,200,"PROJET TD : RUNNER" +
+        Text gameTitle = new Text(100,200,"TD PROJECT : RUNNER" +
                                                     "\nSPACE : Jump" +
                                                     "\nR : Shoot");
         gameTitle.setFont(new Font("Arial",20));
         gameTitle.setTextAlignment(TextAlignment.CENTER);
         pane.getChildren().add(gameTitle);
+        //create credits text
+        Text credits = new Text(400 - 155, 400 - 10, "Made by : Clément BERLIOZ");
+        pane.getChildren().add(credits);
+
         //create start button
         Button playButton = new Button("Start !");
         pane.getChildren().add(playButton);

@@ -6,22 +6,12 @@ import java.util.Arrays;
 import java.util.Dictionary;
 
 public class Sound {
-    private Dictionary<String, MediaPlayer> listOfSoundFiles;
+    //doesn't work
     public Sound(){
 
-        for(String fileName : new ArrayList<>(Arrays.asList(
-                "Honking.wav",
-                "Mars.wav",
-                "Mercury.wav",
-                "Venus.wav"
-        ))){
-            Media sound = new Media("file:./sound/" + fileName);
-            MediaPlayer soundplayer = new MediaPlayer(sound);
-            listOfSoundFiles.put(fileName,soundplayer); //Dictionary made of fileNames and their respective MediaPlayer
-        }
     }
     public void playSound(String fileName){
-        MediaPlayer player = this.listOfSoundFiles.get(fileName);
+        MediaPlayer player = new MediaPlayer(new Media(fileName));
         player.play();
     }
 }

@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="added comments for code readability">
-      <change beforePath="$PROJECT_DIR$/src/DevHUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DevHUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalConstants.java" afterDir="false" />
+    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="changed finish line position to 30000">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WinFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WinFlag.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701352909139</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change fps counter to update every half second">
+      <created>1701353065343</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701353065343</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changed finish line position to 30000">
+      <created>1701353089705</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701353089705</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,6 +120,9 @@
     <MESSAGE value="added credits" />
     <MESSAGE value="removed useless input management lines" />
     <MESSAGE value="added comments for code readability" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments for code readability" />
+    <MESSAGE value="change fps counter to update every half second" />
+    <MESSAGE value="change finish line position to 30000" />
+    <MESSAGE value="changed finish line position to 30000" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed finish line position to 30000" />
   </component>
 </project>

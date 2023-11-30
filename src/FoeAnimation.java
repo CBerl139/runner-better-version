@@ -17,7 +17,7 @@ public class FoeAnimation extends ImageView implements GlobalConstants{
         this.randomIndexOffset = Math.random();
     }
     public void update(long time){
-        //update timer to scroll through the sprites in the sprite sheet every 3rd of a second
+        //update timer to scroll through the sprites in the sprite sheet every 5th of a second
         this.index = ((int) (5 * time/1000000000 + Math.floor(maximumIndex * randomIndexOffset))%maximumIndex);
 
         this.spriteArea = new Rectangle2D((foe.sizeOfWindowWidth) * this.index,0,foe.sizeOfWindowWidth,foe.sizeOfWindowHeight);

@@ -15,6 +15,7 @@ public class Main extends Application implements GlobalConstants{
         this.primaryStage = primaryStage;
         primaryStage.setTitle("TD PROJECT : RUNNER");
         primaryStage.setResizable(false);
+
         //display the start menu :
         startMenu();
     }

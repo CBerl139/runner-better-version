@@ -1,8 +1,6 @@
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 
-import java.util.Dictionary;
-
 public class InputManager {
     Hero hero;
     public InputManager(GameScene gameScene, Hero hero, BulletList listOfBullets, DevHUD devHUD){
@@ -12,9 +10,6 @@ public class InputManager {
                 switch (ke.getCode()){
                     case SPACE:
                         hero.jump();
-                        break;
-                    case E:
-                        hero.toggleBehavior();  //useless, behavior is automatically set correctly by the hero.update() method
                         break;
                     case R:
                         hero.shoot(listOfBullets);

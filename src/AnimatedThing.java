@@ -3,7 +3,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 import java.awt.*;
-    enum Behavior{
+import java.util.ArrayList;
+
+enum Behavior{
         RUNNING, JUMPING, SHOOTING, SHOOTING_JUMPING;
     }
 

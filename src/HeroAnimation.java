@@ -16,7 +16,8 @@ public class HeroAnimation extends ImageView implements GlobalConstants{
         this.index = 0;
     }
     public void update(long time){
-        this.index = (int) (10 * time/1000000000)%maximumIndex;   //should be in HeroAnimation update but flemme de tout changer
+        //change the sprite index every 20 thirds of a second
+        this.index = (int) Math.floor(10  * 2/3 * time/1000000000)%maximumIndex;
 
         if (hero.getInvincibility() != 0){
             this.setImage(new Image("file:./img/heros-transparent.png"));
@@ -28,7 +29,7 @@ public class HeroAnimation extends ImageView implements GlobalConstants{
     }
     public void render(double cameraX, double cameraY){
         this.setViewport(spriteArea);
-
+        //move the hero according to the hero position, with an offset of 250 + YOFFSET to keep hero at ground level when at y = 0
         this.setX((hero.getX() - cameraX));
         this.setY(250 + YOFFSET + (hero.getY() - cameraY)); //imageview is offset by y = 250
     }

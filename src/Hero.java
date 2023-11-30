@@ -7,7 +7,6 @@ import java.util.Dictionary;
 import java.util.Random;
 
 public class Hero extends AnimatedThing implements GlobalConstants{
-    private Pane pane;
     private double speedY;
     private final double accelerationY = 9.8/100;
     private int numberOfJumpsLeft;
@@ -21,7 +20,6 @@ public class Hero extends AnimatedThing implements GlobalConstants{
         super(pane,x,y,maximumIndex,sizeOfWindowWidth,sizeOfWindowHeight,offsetBetweenEachFrame,fileName);
         this.animation = new HeroAnimation(this,maximumIndex);
         pane.getChildren().add(animation);
-        this.pane = pane;
 
         this.invincibility = 0.0;
         this.numberOfJumpsLeft = MAX_NUMBER_OF_JUMPS;
@@ -39,11 +37,15 @@ public class Hero extends AnimatedThing implements GlobalConstants{
         boolean isOffTheGround = this.y < 0;
 
         //Gravity
-        if (isOnTheGround) {    //Reset the speed when the hero touches the ground
-            this.y = 0;         //make sure it is exactly on the ground
+        if (isOnTheGround) {
+            //make sure it is exactly on the ground
+            this.y = 0;
+            //Reset the speed when the hero touches the ground
             this.speedY = 0;
+            //reset the number of jumps the hero has left
             this.numberOfJumpsLeft = MAX_NUMBER_OF_JUMPS;
-            switch(this.behavior) {                         //should probably be in HeroAnimation but flemme aussi
+            //change hero behavior from jumping to running
+            switch(this.behavior) {
                 case JUMPING -> this.setBehavior(Behavior.RUNNING);
                 case SHOOTING_JUMPING -> this.setBehavior(Behavior.SHOOTING);
             }
@@ -67,7 +69,7 @@ public class Hero extends AnimatedThing implements GlobalConstants{
         }
 
         hitBox = new Rectangle2D(x + 15,y,this.hitBox.getWidth(),this.hitBox.getHeight());
-        animation.update(time * 2/3);
+        animation.update(time);
 
     }
     public void render(double cameraX, double cameraY){
@@ -75,7 +77,8 @@ public class Hero extends AnimatedThing implements GlobalConstants{
     }
     public void jump(){
         if (this.numberOfJumpsLeft > 0){
-            this.speedY -= JUMP_HEIGHT;  //Jump height
+            this.speedY -= JUMP_HEIGHT;
+            //change behavior of hero from running to jumping
             switch (this.behavior) {
                 case RUNNING:
                     this.setBehavior(Behavior.JUMPING);
@@ -85,7 +88,6 @@ public class Hero extends AnimatedThing implements GlobalConstants{
             }
             numberOfJumpsLeft--;
         }
-        //this.animation.jump();
     }
     public void toggleBehavior(){
         switch (this.behavior){

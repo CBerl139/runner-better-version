@@ -19,12 +19,6 @@ public class GamePage implements GlobalConstants{
     public GameScene getGameScene(){
         return this.gameScene;
     }
-    public void update(long time){
-        gameScene.update(time);
-    }
-    public void render(){
-        gameScene.render();
-    }
     public void stopTimer(){
         gameScene.toggleTimer();
     }

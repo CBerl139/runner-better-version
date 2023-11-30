@@ -28,7 +28,7 @@ public class DevHUD implements GlobalConstants{
     private Dictionary<Bullet,Rectangle> listOfBulletHitBoxes;
     private Rectangle winFlagHitBox;
     private int accumulatedFrames;
-    private int lastHalfSecond;
+    private int lastSecond;
     private int FPS;
     public DevHUD(Pane pane, Hero hero, FoeList listOfFoes, BulletList listOfBullets, WinFlag winFlag){
         this.hero = hero;
@@ -111,11 +111,11 @@ public class DevHUD implements GlobalConstants{
 
     public void update(long time){
         accumulatedFrames++;
-        int currentHalfSecond = (int) Math.floor(2 * time/1000000000);
-        if (currentHalfSecond > lastHalfSecond) {   //update the count every half second
-            FPS = 2 * accumulatedFrames;
+        int currentSecond = (int) Math.floor(time/1000000000);
+        if (currentSecond > lastSecond) {   //update the count every half second
+            FPS = accumulatedFrames;
             accumulatedFrames = 0;                  //reset accumulatedFrames
-            lastHalfSecond = currentHalfSecond;
+            lastSecond = currentSecond;
         }
     }
     public void render(double cameraX, double cameraY){

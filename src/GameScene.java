@@ -1,4 +1,5 @@
 import javafx.animation.AnimationTimer;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
@@ -15,8 +16,6 @@ public class GameScene extends Scene implements GlobalConstants{
     private Hearts hearts;
     private BulletHUD bulletHUD;
     private ProgressHUD progressHUD;
-    private Dictionary<UserInput,Boolean> inputPressed;
-    private UserInput keyPressed;
     private AnimationTimer timer;
     private DevHUD devHud;
     private WinFlag winFlag;
@@ -47,10 +46,8 @@ public class GameScene extends Scene implements GlobalConstants{
         progressHUD = new ProgressHUD(parentPane, parentMain,"file:./img/progress-bar.png");
 
         devHud = new DevHUD(parentPane,hero,listOfFoes,listOfBullets,winFlag);
-
+        //manage inputs :
         InputManager inputManager = new InputManager(this,hero,listOfBullets,devHud);
-        //inputPressed = new Hashtable<>();
-        //InputManager inputManager = new InputManager(this,inputPressed);
 
         timer = new AnimationTimer() {
             @Override
@@ -64,7 +61,7 @@ public class GameScene extends Scene implements GlobalConstants{
     }
     public void update(long time){
         //move things that move and compute other things (e.g. hitbox collision, etc.)
-        hero.update(inputPressed,time);
+        hero.update(time);
         hearts.update(hero,time);
         listOfFoes.update(hero,time);
         camera.update(hero,time);

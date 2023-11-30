@@ -1,6 +1,10 @@
 import javafx.geometry.Rectangle2D;
 import javafx.scene.layout.Pane;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Dictionary;
+import java.util.Random;
 
 public class Hero extends AnimatedThing implements GlobalConstants{
     private Pane pane;
@@ -12,7 +16,7 @@ public class Hero extends AnimatedThing implements GlobalConstants{
     private int numberOfHearts;
     private double shootingAnimationDuration;
     private Boolean godMode;
-
+    private ArrayList<Rectangle2D> spriteArea;
     public Hero(Pane pane, double x, double y, int maximumIndex, int sizeOfWindowWidth, int sizeOfWindowHeight, int offsetBetweenEachFrame, String fileName){
         super(pane,x,y,maximumIndex,sizeOfWindowWidth,sizeOfWindowHeight,offsetBetweenEachFrame,fileName);
         this.animation = new HeroAnimation(this,maximumIndex);
@@ -26,23 +30,10 @@ public class Hero extends AnimatedThing implements GlobalConstants{
 
         this.godMode = false;
     }
-    @Override
     public void update(long time){
-        //place holder
-    }
-    public void update(Dictionary<UserInput, Boolean> inputPressed, long time){
         //move hero to the right
         this.x += HERO_SPEED_X; //How many pixels does the hero moves per frame
         //jump is handled in inputmanager
-
-        //Respond to inputs (not functional), a "framesUntilCanJump" could be added for it to work
-        //if (keyPressed == UserInput.SPACE){
-        //    this.jump();
-        //} else if(keyPressed == UserInput.E){
-        //    this.toggleBehavior();
-        //} else if (keyPressed == UserInput.R) {
-        //    this.shoot();
-        //}
 
         boolean isOnTheGround = this.y > 0;
         boolean isOffTheGround = this.y < 0;

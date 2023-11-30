@@ -2,9 +2,7 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 
 public class InputManager {
-    Hero hero;
     public InputManager(GameScene gameScene, Hero hero, BulletList listOfBullets, DevHUD devHUD){
-        this.hero = hero;
         gameScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent ke) {
                 switch (ke.getCode()){

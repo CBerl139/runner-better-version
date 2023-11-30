@@ -35,8 +35,8 @@ public class WinFlag implements GlobalConstants{
             animation.setY(250 + YOFFSET + (this.getY() - cameraY));
         }
     }
-    //finish game when hero collects flag :
     public void getCollected(Hero hero){
+        //finish game when hero collects flag :
         gameScene.finishGame(hero.getNumberOfHearts());
     }
     public double getX() {

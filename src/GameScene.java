@@ -23,7 +23,7 @@ public class GameScene extends Scene implements GlobalConstants{
     public GameScene(Main parentMain, Pane parentPane, double v, double v1, boolean b) {
         super(parentPane, v, v1, b);
         this.parentMain = parentMain;
-        //TODO : add birds at the top of the screen that go from right to left and fly away if too close to the hero
+
         //create the background without parallax effect
         //background = new BackgroundAnimation(parentPane,"file:./img/desert.png");
         //create the background with parallax effect :

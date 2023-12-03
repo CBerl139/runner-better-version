@@ -2,7 +2,6 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 enum Behavior{
@@ -12,7 +11,7 @@ enum Behavior{
 public abstract class AnimatedThing implements GlobalConstants{
     double x;
     double y;
-    Behavior behavior;
+    private Behavior behavior;
     int sizeOfWindowWidth;
     int sizeOfWindowHeight;
     int offsetBetweenEachFrame;
@@ -48,13 +47,16 @@ public abstract class AnimatedThing implements GlobalConstants{
     public double getY() {
         return y;
     }
-    public void setBehavior(Behavior behavior){
-        this.behavior = behavior;
-    }
     public Rectangle2D getHitBox(){
         return hitBox;
     }
     public String getFileName(){
         return fileName;
+    }
+    public Behavior getBehavior(){
+        return this.behavior;
+    }
+    public void setBehavior(Behavior behavior){
+        this.behavior = behavior;
     }
 }

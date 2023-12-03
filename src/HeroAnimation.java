@@ -24,8 +24,8 @@ public class HeroAnimation extends ImageView implements GlobalConstants{
         }else{
             this.setImage(new Image(hero.getFileName()));
         }
-        this.spriteArea = new Rectangle2D((hero.sizeOfWindowWidth) * ((hero.behavior == Behavior.RUNNING || hero.behavior == Behavior.SHOOTING)?this.index:((hero.getSpeedY()<0)?0:1)),
-                (hero.sizeOfWindowHeight + hero.offsetBetweenEachFrame) * hero.behavior.ordinal(),hero.sizeOfWindowWidth,hero.sizeOfWindowHeight);
+        this.spriteArea = new Rectangle2D((hero.sizeOfWindowWidth) * ((hero.getBehavior() == Behavior.RUNNING || hero.getBehavior() == Behavior.SHOOTING)?this.index:((hero.getSpeedY()<0)?0:1)),
+                (hero.sizeOfWindowHeight + hero.offsetBetweenEachFrame) * hero.getBehavior().ordinal(),hero.sizeOfWindowWidth,hero.sizeOfWindowHeight);
     }
     public void render(double cameraX, double cameraY){
         this.setViewport(spriteArea);

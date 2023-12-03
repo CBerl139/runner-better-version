@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="changed finish line position to 30000">
+    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="changed some comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WinFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WinFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnimatedThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedThing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HeroAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HeroAnimation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701353089705</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed Sound but it stilll doesnt work">
+      <created>1701368301592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701368301592</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changed some comments">
+      <created>1701368362329</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701368362329</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,6 +137,8 @@
     <MESSAGE value="change fps counter to update every half second" />
     <MESSAGE value="change finish line position to 30000" />
     <MESSAGE value="changed finish line position to 30000" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed finish line position to 30000" />
+    <MESSAGE value="changed Sound but it stilll doesnt work" />
+    <MESSAGE value="changed some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some comments" />
   </component>
 </project>

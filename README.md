@@ -11,7 +11,7 @@ ENSEA TD Project runner
 ```
 --module-path <./lib file path> --add-modules javafx.controls
 ```
-Make sure you replace <./lib file path> with your /lib folder's path
+Make sure you replace `<./lib file path>` with your /lib folder's path
 
 You can now run the code. Everything should work fine.
 If the IDE tells you that there is a problem with the JDK, click on solve automatically and wait for the download to end, then run the code again

@@ -15,3 +15,9 @@ Make sure you replace <./lib file path> with your /lib folder's path
 
 You can now run the code. Everything should work fine.
 If the IDE tells you that there is a problem with the JDK, click on solve automatically and wait for the download to end, then run the code again
+
+## Things that could be improved
+- I didn't know how to make the hero shoot and infinite amount of bullets so I made him only shoot 3 and modifiied the already-existing ones.
+- Some classes could be removed, especially `HeroAnimation`, `FoeAnimation` and `BulletAnimation`, which could be integrated inside the `Hero`, `Foe`, and `Bullet` classes, and thus allow for more inherintance usage.
+FoeList could also be replaced by an `ArrayList<Foe>` attribute inside the `GameScene` class
+- Instead of recreating a new Rectangle2D for the spriteArea of the hero and foe, they could be precreated inside an `ArrayList<Rectangle2D>` which could then be accessed, which would avoid a new object creation at every `update()` call.

@@ -25,7 +25,7 @@ public class Camera implements GlobalConstants{
         //if statement to stop camera movement if hero is close to the finish line
         if (FINISH_LINE_X - hero.getX() > WINDOW_WIDTH - 300) {
             this.accelerationX = (0.05 * (hero.getX() - HERO_STARTING_POSITION_X - this.x) + 9 * this.speedX) / 10;
-            this.speedX = +this.accelerationX;
+            this.speedX = +this.accelerationX;      //TODO problème à régler
             this.x += this.speedX;
         }
 

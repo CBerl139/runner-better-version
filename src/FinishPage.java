@@ -19,18 +19,30 @@ public class FinishPage {
         Pane pane = new Pane(root);
 
         scene = new Scene(pane,500,500,true);
-        pane.getChildren().add(new ImageView(new Image(numberOfHearts!=0?"file:./img/win-screen.png":"file:./img/game-over-screen.png")));
+        ImageView background = new ImageView();
+        pane.getChildren().add(background);
 
-        Text text = new Text(175,175,numberOfHearts!=0?("YOU WON !!!\n Hearts Remaining : "):"YOU LOST :/");
-        pane.getChildren().add(text);
+        Text winloseText = new Text(175,175,"");
+        pane.getChildren().add(winloseText);
 
         Text scoreInfo = new Text(175,225,"");
-        pane.getChildren().add(scoreInfo);
         scoreInfo.setTextAlignment(TextAlignment.RIGHT);
+        pane.getChildren().add(scoreInfo);
+
+        Button restartButton = new Button("Restart Game !");
+        restartButton.setMinSize(100,100);
+        restartButton.relocate(175,250);
+        pane.getChildren().add(restartButton);
 
         if (numberOfHearts == 0){
+            background.setImage(new Image("file:./img/game-over-screen.png"));
+            winloseText.setText("YOU LOST :/");
+
             scoreInfo.setText("Score : " + lastScore + "%" + "\nHigh Score : " + parentMain.getHighScore() + "%");
         } else {
+            background.setImage(new Image("file:./img/win-screen.png"));
+            winloseText.setText("YOU WON !!!\n Hearts Remaining : ");
+
             ImageView imageView = new ImageView(new Image("file:./img/heart-spritesheet.png"));
             imageView.setViewport(new Rectangle2D(0,12 * numberOfHearts,36,12));
             imageView.setX(200);
@@ -39,11 +51,6 @@ public class FinishPage {
 
             scoreInfo.setText("High Score : " + parentMain.getHighScore() + "%");
         }
-
-        Button restartButton = new Button("Restart Game !");
-        pane.getChildren().add(restartButton);
-        restartButton.setMinSize(100,100);
-        restartButton.relocate(175,250);
 
         //action when button is pressed
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {

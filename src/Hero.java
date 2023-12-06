@@ -12,11 +12,13 @@ public class Hero extends AnimatedThing implements GlobalConstants{
     private int numberOfJumpsLeft;
     private double invincibility;
     private HeroAnimation animation;
+    private String fileNameTransparent;
     private int numberOfHearts;
     private double shootingAnimationDuration;
     private Boolean godMode;
-    public Hero(Pane pane, double x, double y, int maximumIndex, int sizeOfWindowWidth, int sizeOfWindowHeight, int offsetBetweenEachFrame, String fileName){
+    public Hero(Pane pane, double x, double y, int maximumIndex, int sizeOfWindowWidth, int sizeOfWindowHeight, int offsetBetweenEachFrame, String fileName, String fileNameTransparent){
         super(pane,x,y,maximumIndex,sizeOfWindowWidth,sizeOfWindowHeight,offsetBetweenEachFrame,fileName);
+        this.fileNameTransparent = fileNameTransparent;
         this.animation = new HeroAnimation(this,maximumIndex);
         pane.getChildren().add(animation);
 
@@ -122,6 +124,9 @@ public class Hero extends AnimatedThing implements GlobalConstants{
     }
     public Boolean getGodMode(){
         return godMode;
+    }
+    public String getFileNameTransparent(){
+        return fileNameTransparent;
     }
     public void setInvincibility(double invincibility){
         this.invincibility = invincibility;

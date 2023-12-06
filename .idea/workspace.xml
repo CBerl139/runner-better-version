@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="changed some comments">
+    <list default="true" id="782aeaac-7f41-4207-98f8-a594fea6d425" name="Changes" comment="set behavior to private">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnimatedThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedThing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FinishPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FinishPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HeroAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HeroAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParalaxBackgroundAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParalaxBackgroundAnimation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701368362329</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="set behavior to private">
+      <created>1701605224328</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701605224328</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -139,6 +150,7 @@
     <MESSAGE value="changed finish line position to 30000" />
     <MESSAGE value="changed Sound but it stilll doesnt work" />
     <MESSAGE value="changed some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed some comments" />
+    <MESSAGE value="set behavior to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="set behavior to private" />
   </component>
 </project>

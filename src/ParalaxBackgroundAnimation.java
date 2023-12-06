@@ -2,11 +2,11 @@ import javafx.scene.layout.Pane;
 
 public class ParalaxBackgroundAnimation implements GlobalConstants{
     private StaticThing sky;
-    private StaticThing leftMountains;
     private StaticThing leftClouds;
-    private StaticThing leftForeground;
-    private StaticThing rightMountains;
     private StaticThing rightClouds;
+    private StaticThing leftMountains;
+    private StaticThing rightMountains;
+    private StaticThing leftForeground;
     private StaticThing rightForeground;
     private StaticThing leftRocks;
     private StaticThing rightRocks;

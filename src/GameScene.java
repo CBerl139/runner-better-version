@@ -32,7 +32,7 @@ public class GameScene extends Scene implements GlobalConstants{
         listOfFoes = new FoeList(parentPane,FOE_DENSITY,"file:./img/heros.png");
         //create the hero
         hero = new Hero(parentPane,HERO_STARTING_POSITION_X,HERO_STARTING_POSITION_Y,6,85,
-                104,59, "file:./img/heros.png");
+                104,59, "file:./img/heros.png","file:./img/heros-transparent.png");
         //create the list of bullets (3 bullets)
         listOfBullets = new BulletList(parentPane,hero,"file:./img/heros.png");
         //create the camera and place it where the hero starts

@@ -29,6 +29,7 @@ public class Bullet extends AnimatedThing{
             }
         }
         if (hasHitFoe) {
+            //Potential improvement : creating a new bullet (this = new Bullet(...) instead of reset this one ?
             this.x = hero.getX() - 50;
             this.y = -100;// BACKGROUND_HEIGHT + 50;
         }

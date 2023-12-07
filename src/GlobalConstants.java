@@ -15,7 +15,7 @@ public interface GlobalConstants {
     int FOE_DENSITY = 3;
     double INVINCIBILITY_DURATION = 2.5 * 100;
     int MAX_NUMBER_OF_JUMPS = 2;
-    double FINISH_LINE_X = 30000;
+    double FINISH_LINE_X = 40000;
     double FIRE_RATE = 6 * 100;
 
 }

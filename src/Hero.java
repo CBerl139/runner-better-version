@@ -98,6 +98,7 @@ public class Hero extends AnimatedThing implements GlobalConstants{
             case SHOOTING_JUMPING -> this.setBehavior(Behavior.JUMPING);
         }
     }
+
     public void shoot(BulletList listOfBullets){
         if (shootingAnimationDuration == 0 && listOfBullets.numberOfCanBeShot() != 0){
             switch (this.getBehavior()){

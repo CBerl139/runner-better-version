@@ -81,11 +81,8 @@ public class Hero extends AnimatedThing implements GlobalConstants{
             this.speedY -= JUMP_HEIGHT;
             //change behavior of hero from running to jumping
             switch (this.getBehavior()) {
-                case RUNNING:
-                    this.setBehavior(Behavior.JUMPING);
-                    break;
-                case SHOOTING:
-                    this.setBehavior(Behavior.SHOOTING_JUMPING);
+                case RUNNING -> this.setBehavior(Behavior.JUMPING);
+                case SHOOTING -> this.setBehavior(Behavior.SHOOTING_JUMPING);
             }
             numberOfJumpsLeft--;
         }

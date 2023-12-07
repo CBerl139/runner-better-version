@@ -21,3 +21,4 @@ If the IDE tells you that there is a problem with the JDK, click on solve automa
 - Some classes could be removed, especially `HeroAnimation`, `FoeAnimation` and `BulletAnimation`, which could be integrated inside the `Hero`, `Foe`, and `Bullet` classes, and inside the `AnimatedThings` super class, and thus allow for more inherintance usage.
 `FoeList` could also be replaced by an `ArrayList<Foe>` attribute inside the `GameScene` class. `InputManager` is more of a utility class which could (and maybe should) be removed, moving its content to `GameScene` constructor instead.
 - Instead of recreating a new `Rectangle2D` for the `spriteArea` of the hero and foe, they could be precreated inside an `ArrayList<Rectangle2D>` which could then be accessed, which would avoid a new object creation at every `update()` call.
+- Get better sprites for the foes and better images for the `FinishPage`.

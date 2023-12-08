@@ -31,7 +31,7 @@ public class StartPage {
         gameTitle.setTextAlignment(TextAlignment.CENTER);
         pane.getChildren().add(gameTitle);
         //create credits text
-        Text credits = new Text(400 - 155, 400 - 10, "Made by : Clément BERLIOZ");
+        Text credits = new Text(400 - 155, 400 - 10, "Made by : CBerl139");
         pane.getChildren().add(credits);
 
         //create start button
